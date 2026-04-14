@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Comercial Quillacas — Baterías Premium Bolivia</title>
+  <meta name="description" content="Catálogo de baterías para autos y motos. FBC, TOYO, VOLTA, Energetic, AUTOBAT, Panasonic. Cochabamba, Bolivia. ☎ 65302585"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+
+<!-- BG (Minimalist) -->
+<div class="bg-scene" aria-hidden="true"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="nav" id="nav">
+  <div class="nav-wrap">
+    <a href="#hero" class="nav-brand">
+      <div class="nav-logo-ring">
+        <img src="img/logo.png" alt="CQ" class="nav-logo-img"/>
+      </div>
+      <div class="nav-brand-text">
+        <span class="nbt-top">COMERCIAL</span>
+        <span class="nbt-bot">QUILLACAS</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"      class="nl">Inicio</a></li>
+      <li><a href="#servicio"  class="nl nl-service">🔧 Servicio Técnico</a></li>
+      <li><a href="#autos"    class="nl">Baterías Auto</a></li>
+      <li><a href="#motos"    class="nl">Baterías Moto</a></li>
+      <li><a href="#contacto" class="nl">Contacto</a></li>
+      <li><a href="https://wa.me/59165302585" target="_blank" class="nl nl-wa">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
+        WhatsApp
+      </a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-wrap">
+    <div class="hero-copy">
+      <div class="hero-pill"><span class="pill-dot"></span>Distribución Autorizada · Cochabamba, Bolivia</div>
+      <h1 class="hero-h1">La batería que<br><em>tu vehículo</em><br>necesita</h1>
+      <p class="hero-p">Catálogo completo de acumuladores para autos y motos. 6 marcas líderes, garantía real, entrega inmediata.</p>
+      <div class="hero-stats">
+        <div class="hs"><strong data-count="26">0</strong><span>Modelos</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><strong data-count="6">0</strong><span>Marcas</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><strong>200Ah</strong><span>Máx.</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#autos" class="btn-gold">Ver Baterías Auto →</a>
+        <a href="#motos" class="btn-outline">🏍 Ver Motos</a>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <img src="img/hero-battery.png" alt="Batería premium" class="hv-img"/>
+    </div>
+  </div>
+</section>
+<!-- ══ SERVICIO TÉCNICO ══ -->
+<section class="srv-section" id="servicio">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag sec-tag-srv">🔧 Taller Especializado</div>
+      <h2 class="sec-h2">Servicio <em class="em-srv">Técnico</em> de Baterías</h2>
+      <p class="sec-p">Diagnóstico, reparación y mantenimiento profesional. Técnicos certificados con equipos de última generación en Cochabamba.</p>
+    </div>
+
+    <!-- TARJETAS DE SERVICIO -->
+    <div class="srv-grid">
+
+      <div class="srv-card" id="srv-diagnostico">
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">🔍</span>
+        </div>
+        <h3>Diagnóstico de Batería</h3>
+        <p>Prueba de carga, voltaje y capacidad real con equipo digital. Detectamos fallas internas antes de que dejes varado tu vehículo.</p>
+        <ul class="srv-list">
+          <li>✔ Prueba de arranque en frío (CCA)</li>
+          <li>✔ Análisis de sulfatación</li>
+          <li>✔ Revisión de terminales y celdas</li>
+          <li>✔ Informe técnico gratuito</li>
+        </ul>
+        <div class="srv-price">Diagnóstico <strong>GRATIS</strong></div>
+        <button class="srv-wa-btn" data-srv="Diagnóstico de Batería">📲 Agendar Diagnóstico</button>
+      </div>
+
+      <div class="srv-card" id="srv-carga">
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">⚡</span>
+        </div>
+        <h3>Carga y Recuperación</h3>
+        <p>Recargamos baterías descargadas con cargadores inteligentes de pulso. Recuperamos hasta un 85% de baterías dadas por muertas.</p>
+        <ul class="srv-list">
+          <li>✔ Carga lenta profunda</li>
+          <li>✔ Desulfatación por pulso eléctrico</li>
+          <li>✔ Recuperación de baterías AGM</li>
+          <li>✔ Hasta 12h de carga controlada</li>
+        </ul>
+        <div class="srv-price">Desde <strong>Bs. 30</strong></div>
+        <button class="srv-wa-btn" data-srv="Carga y Recuperación de Batería">📲 Consultar Precio</button>
+      </div>
+
+      <div class="srv-card srv-card-featured" id="srv-reparacion">
+        <div class="srv-feat-glow"></div>
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">🔩</span>
+        </div>
+        <div class="srv-badge-top">⭐ Más Solicitado</div>
+        <h3>Reparación de Batería</h3>
+        <p>Reparamos celdas dañadas, soldamos bornes sueltos y reemplazamos placas deterioradas. Extendemos la vida útil de tu batería.</p>
+        <ul class="srv-list">
+          <li>✔ Reemplazo de celdas dañadas</li>
+          <li>✔ Soldadura de bornes y terminales</li>
+          <li>✔ Sellado y reconstrucción de carcasa</li>
+          <li>✔ Prueba final garantizada</li>
+        </ul>
+        <div class="srv-price">Desde <strong>Bs. 80</strong></div>
+        <button class="srv-wa-btn" data-srv="Reparación de Batería">📲 Solicitar Reparación</button>
+      </div>
+
+      <div class="srv-card" id="srv-mantenimiento">
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">🛡</span>
+        </div>
+        <h3>Mantenimiento Preventivo</h3>
+        <p>Servicio periódico para flotas empresariales y vehículos de trabajo. Evita imprevistos y maximiza la vida útil de tus acumuladores.</p>
+        <ul class="srv-list">
+          <li>✔ Limpieza de terminales con anticorrosión</li>
+          <li>✔ Revisión de nivel de electrolito</li>
+          <li>✔ Control de carga del alternador</li>
+          <li>✔ Contrato mensual para flotas</li>
+        </ul>
+        <div class="srv-price">Plan flota desde <strong>Bs. 150/mes</strong></div>
+        <button class="srv-wa-btn" data-srv="Mantenimiento Preventivo de Batería">📲 Plan de Mantenimiento</button>
+      </div>
+
+      <div class="srv-card" id="srv-electrolito">
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">💧</span>
+        </div>
+        <h3>Reposición de Electrolito</h3>
+        <p>Reponemos agua destilada y ácido sulfúrico con la densidad exacta. Ideal para baterías de plomo abiertas en buen estado.</p>
+        <ul class="srv-list">
+          <li>✔ Agua destilada certificada</li>
+          <li>✔ Calibración de densidad (densímetro)</li>
+          <li>✔ Servicio para motos y autos</li>
+          <li>✔ Asesoría de mantenimiento</li>
+        </ul>
+        <div class="srv-price">Desde <strong>Bs. 20</strong></div>
+        <button class="srv-wa-btn" data-srv="Reposición de Electrolito">📲 Consultar</button>
+      </div>
+
+      <div class="srv-card" id="srv-instalacion">
+        <div class="srv-icon-wrap">
+          <div class="srv-icon-bg"></div>
+          <span class="srv-icon">🚗</span>
+        </div>
+        <h3>Instalación de Batería</h3>
+        <p>Instalamos tu batería nueva correctamente, sin riesgo de daños al sistema eléctrico. Incluye verificación del alternador.</p>
+        <ul class="srv-list">
+          <li>✔ Instalación segura y rápida</li>
+          <li>✔ Verificación de polaridad</li>
+          <li>✔ Reset de computadora (si aplica)</li>
+          <li>✔ Prueba de arranque final</li>
+        </ul>
+        <div class="srv-price">Instalación <strong>GRATIS</strong> con compra</div>
+        <button class="srv-wa-btn" data-srv="Instalación de Batería">📲 Agendar Instalación</button>
+      </div>
+
+    </div><!-- /srv-grid -->
+
+    <!-- PROCESO PASO A PASO -->
+    <div class="srv-process">
+      <h3 class="srv-proc-title">¿Cómo funciona?</h3>
+      <div class="srv-steps">
+        <div class="srv-step">
+          <div class="srv-step-num">1</div>
+          <h4>Contáctanos</h4>
+          <p>Escríbenos por WhatsApp o llámanos al 65302585 para agendar tu visita.</p>
+        </div>
+        <div class="srv-step-arrow">→</div>
+        <div class="srv-step">
+          <div class="srv-step-num">2</div>
+          <h4>Diagnóstico</h4>
+          <p>Evaluamos tu batería con equipos digitales en minutos. El diagnóstico es GRATIS.</p>
+        </div>
+        <div class="srv-step-arrow">→</div>
+        <div class="srv-step">
+          <div class="srv-step-num">3</div>
+          <h4>Servicio</h4>
+          <p>Realizamos el servicio acordado: reparación, carga, mantenimiento o instalación.</p>
+        </div>
+        <div class="srv-step-arrow">→</div>
+        <div class="srv-step">
+          <div class="srv-step-num">4</div>
+          <h4>Garantía</h4>
+          <p>Entregamos con garantía escrita y prueba de funcionamiento en tu vehículo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA CENTRAL -->
+    <div class="srv-cta">
+      <div class="srv-cta-inner">
+        <h3>¿Tu batería no arranca? <em>Podemos ayudarte.</em></h3>
+        <p>Atención inmediata en Cochabamba · Lun–Sáb 8:00–18:00</p>
+        <a href="https://wa.me/59165302585?text=Hola%2C%20necesito%20servicio%20t%C3%A9cnico%20para%20mi%20bater%C3%ADa." target="_blank" class="srv-cta-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
+          Solicitar Servicio Técnico Ahora
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ MARQUEE MARCAS ══ -->
+<div class="marquee-section">
+  <div class="marquee-fade left"></div>
+  <div class="marquee-fade right"></div>
+  <div class="marquee-track">
+    <div class="mt-inner" id="marqueeInner">
+      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
+      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BATERÍAS DE AUTO ══ -->
+<section class="cat-section" id="autos">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag">🚗 Línea Automotriz</div>
+      <h2 class="sec-h2">Baterías de <em>Auto</em></h2>
+      <p class="sec-p">Desde compactos hasta tractocamiones. Haz clic en una batería → compra directamente por WhatsApp.</p>
+    </div>
+
+    <!-- SUB-FILTROS AUTOS -->
+    <div class="sub-tabs" id="autoTabs">
+      <button class="stab active" data-cat="liviano">🚗 Livianos</button>
+      <button class="stab" data-cat="suv">🚙 Camionetas / SUV</button>
+      <button class="stab" data-cat="pesado">🚛 Pesados</button>
+      <button class="stab" data-cat="agm">🔩 AGM / Diésel</button>
+      <button class="stab" data-cat="premium">⭐ Premium</button>
+    </div>
+
+    <div class="cat-grid auto-grid" id="autoGrid">
+
+      <!-- LIVIANOS -->
+      <article class="pcard" data-auto="liviano" data-model="NS40ZL" data-brand="FBC" data-ah="35–40 Ah" data-cca="350 A" data-img="img/battery-liviano.png">
+        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS40ZL" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>NS40ZL</h3><div class="pcca"><span>CCA</span><b>350A</b></div></div>
+          <p>Autos compactos &lt;1.3L · Uso urbano diario</p>
+          <div class="ptags"><span>⚡ 35–40 Ah</span><span>🔥 350 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="liviano" data-model="NS60L" data-brand="FBC" data-ah="45–55 Ah" data-cca="450 A" data-img="img/battery-liviano.png">
+        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS60L" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>NS60L</h3><div class="pcca"><span>CCA</span><b>450A</b></div></div>
+          <p>Sedanes y hatches 1.4–2.0L · Más vendido</p>
+          <div class="ptags"><span>⚡ 45–55 Ah</span><span>🔥 450 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="liviano" data-model="NS50L" data-brand="TOYO" data-ah="50–55 Ah" data-cca="470 A" data-img="img/battery-liviano.png">
+        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS50L" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">TOYO</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>NS50L</h3><div class="pcca"><span>CCA</span><b>470A</b></div></div>
+          <p>Autos modernos con start-stop · Alta recuperación</p>
+          <div class="ptags"><span>⚡ 50–55 Ah</span><span>🔥 470 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="liviano" data-model="B145" data-brand="Energetic" data-ah="45–50 Ah" data-cca="420 A" data-img="img/battery-liviano.png">
+        <div class="pcard-img"><img src="img/battery-liviano.png" alt="B145" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">Energetic</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>B145</h3><div class="pcca"><span>CCA</span><b>420A</b></div></div>
+          <p>Importados asiáticos · Bandeja específica</p>
+          <div class="ptags"><span>⚡ 45–50 Ah</span><span>🔥 420 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="liviano" data-model="AUTOBAT 55" data-brand="AUTOBAT" data-ah="55 Ah" data-cca="500 A" data-img="img/battery-liviano.png">
+        <div class="pcard-img"><img src="img/battery-liviano.png" alt="AUTOBAT 55" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">AUTOBAT</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>AUTOBAT 55</h3><div class="pcca"><span>CCA</span><b>500A</b></div></div>
+          <p>Económica y confiable · Uso urbano cotidiano</p>
+          <div class="ptags"><span>⚡ 55 Ah</span><span>🔥 500 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <!-- SUV -->
+      <article class="pcard" data-auto="suv" data-model="NS70L" data-brand="FBC" data-ah="70–75 Ah" data-cca="600 A" data-img="img/battery-suv.png">
+        <div class="pcard-img"><img src="img/battery-suv.png" alt="NS70L" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>NS70L / N70</h3><div class="pcca"><span>CCA</span><b>600A</b></div></div>
+          <p>Camionetas medianas 2.4L+ · Estándar japonés</p>
+          <div class="ptags"><span>⚡ 70–75 Ah</span><span>🔥 600 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="suv" data-model="BT54" data-brand="TOYO" data-ah="55–60 Ah" data-cca="500 A" data-img="img/battery-suv.png">
+        <div class="pcard-img"><img src="img/battery-suv.png" alt="BT54" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">TOYO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>BT54</h3><div class="pcca"><span>CCA</span><b>500A</b></div></div>
+          <p>Camionetas con equipo eléctrico extra · LED, cámara</p>
+          <div class="ptags"><span>⚡ 55–60 Ah</span><span>🔥 500 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="suv" data-model="BT70" data-brand="Energetic" data-ah="70–75 Ah" data-cca="620 A" data-img="img/battery-suv.png">
+        <div class="pcard-img"><img src="img/battery-suv.png" alt="BT70" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">Energetic</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>BT70</h3><div class="pcca"><span>CCA</span><b>620A</b></div></div>
+          <p>Camioneta estándar · Alta durabilidad ciclo largo</p>
+          <div class="ptags"><span>⚡ 70–75 Ah</span><span>🔥 620 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="suv" data-model="80D31R" data-brand="VOLTA" data-ah="75–80 Ah" data-cca="700 A" data-img="img/battery-suv.png">
+        <div class="pcard-img"><img src="img/battery-suv.png" alt="80D31R" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">VOLTA</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>80D31R</h3><div class="pcca"><span>CCA</span><b>700A</b></div></div>
+          <p>Diésel y 4×4 · Máx. arranque en frío</p>
+          <div class="ptags"><span>⚡ 75–80 Ah</span><span>🔥 700 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="suv" data-model="NS80D26L" data-brand="Panasonic" data-ah="70–80 Ah" data-cca="680 A" data-img="img/battery-suv.png">
+        <div class="pcard-img"><img src="img/battery-suv.png" alt="NS80D26L" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">Panasonic</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>NS80D26L</h3><div class="pcca"><span>CCA</span><b>680A</b></div></div>
+          <p>Toyota Hilux, Land Cruiser Prado · Tecnología japonesa</p>
+          <div class="ptags"><span>⚡ 70–80 Ah</span><span>🔥 680 A</span><span>✅ 24 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <!-- PESADOS -->
+      <article class="pcard" data-auto="pesado" data-model="N100" data-brand="FBC" data-ah="100 Ah" data-cca="850 A" data-img="img/battery-heavy.png">
+        <div class="pcard-img"><img src="img/battery-heavy.png" alt="N100" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>N100</h3><div class="pcca pcca-red"><span>CCA</span><b>850A</b></div></div>
+          <p>Microbuses y camiones urbanos ligeros</p>
+          <div class="ptags"><span>⚡ 100 Ah</span><span>🔥 850 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="pesado" data-model="N120" data-brand="Energetic" data-ah="120 Ah" data-cca="950 A" data-img="img/battery-heavy.png">
+        <div class="pcard-img"><img src="img/battery-heavy.png" alt="N120" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">Energetic</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>N120</h3><div class="pcca pcca-red"><span>CCA</span><b>950A</b></div></div>
+          <p>Camiones de carga y buses de transporte</p>
+          <div class="ptags"><span>⚡ 120 Ah</span><span>🔥 950 A</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="pesado" data-model="N150" data-brand="VOLTA" data-ah="150 Ah" data-cca="1100 A" data-img="img/battery-pesado.png">
+        <div class="pcard-img"><img src="img/battery-pesado.png" alt="N150" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">VOLTA</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>N150</h3><div class="pcca pcca-red"><span>CCA</span><b>1100A</b></div></div>
+          <p>Flotas de transporte interdepartamental</p>
+          <div class="ptags"><span>⚡ 150 Ah</span><span>🔥 1100 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-star" data-auto="pesado" data-model="N200" data-brand="FBC" data-ah="200 Ah" data-cca="1400 A" data-img="img/battery-pesado.png">
+        <div class="pcard-glow"></div>
+        <div class="pcard-img"><img src="img/battery-pesado.png" alt="N200" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">FBC</span><span class="pb-top">⚡ Máx. Potencia</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>N200</h3><div class="pcca pcca-gold"><span>CCA</span><b>1400A</b></div></div>
+          <p>Tractocamiones y maquinaria pesada · El más potente</p>
+          <div class="ptags"><span>⚡ 200 Ah</span><span>🔥 1400 A</span><span>✅ 24 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-gold">Ver y Comprar →</button>
+      </article>
+
+      <!-- AGM -->
+      <article class="pcard" data-auto="agm" data-model="AGM 70D" data-brand="VOLTA" data-ah="70 Ah" data-cca="720 A" data-img="img/battery-agm.png">
+        <div class="pcard-img"><img src="img/battery-agm.png" alt="AGM 70D" loading="lazy"/><span class="pb pbagm">AGM</span><span class="pb-brand">VOLTA</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>AGM 70D</h3><div class="pcca pcca-cyan"><span>CCA</span><b>720A</b></div></div>
+          <p>Start-Stop · BMW, Mercedes, VW · Sin derrame</p>
+          <div class="ptags"><span>⚡ 70 Ah</span><span>🔥 720 A</span><span>✅ 24 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-cyan">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard" data-auto="agm" data-model="HD Diesel 120" data-brand="TOYO" data-ah="120 Ah" data-cca="1000 A" data-img="img/battery-diesel.png">
+        <div class="pcard-img"><img src="img/battery-diesel.png" alt="HD Diesel 120" loading="lazy"/><span class="pb pbagm">Diésel HD</span><span class="pb-brand">TOYO</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>HD Diesel 120</h3><div class="pcca pcca-cyan"><span>CCA</span><b>1000A</b></div></div>
+          <p>Diésel pesado · Minería y flota · Alta compresión</p>
+          <div class="ptags"><span>⚡ 120 Ah</span><span>🔥 1000 A</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-cyan">Ver y Comprar →</button>
+      </article>
+
+      <!-- PREMIUM -->
+      <article class="pcard pcard-premium" data-auto="premium" data-model="VOLTA Silver Plus" data-brand="VOLTA" data-ah="Alta Densidad" data-cca="Ag-Silver" data-img="img/battery-premium.png">
+        <div class="pcard-img"><img src="img/battery-premium.png" alt="VOLTA Silver Plus" loading="lazy"/><span class="pb pbprem">⭐ Premium</span><span class="pb-brand">VOLTA</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>Silver Plus</h3><div class="pcca pcca-purple"><span>Ag</span><b>Silver</b></div></div>
+          <p>Placas de plata pura · Calor extremo y vibración</p>
+          <div class="ptags"><span>🌡 Anti-calor</span><span>📳 Anti-vibr.</span><span>✅ 24 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-purple">Ver y Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-premium" data-auto="premium" data-model="Panasonic N200" data-brand="Panasonic" data-ah="200 Ah" data-cca="Top Tier" data-img="img/battery-premium.png">
+        <div class="pcard-img"><img src="img/battery-premium.png" alt="Panasonic N200" loading="lazy"/><span class="pb pbprem">⭐ Premium</span><span class="pb-brand">Panasonic</span><span class="pb-top">🏆 Top Tier</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>Panasonic N200</h3><div class="pcca pcca-purple"><span>TOP</span><b>Tier</b></div></div>
+          <p>Tecnología japonesa · Máxima reserva · 36 meses</p>
+          <div class="ptags"><span>⚡ 200 Ah</span><span>🌍 Japón</span><span>✅ 36 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-purple">Ver y Comprar →</button>
+      </article>
+
+    </div><!-- /auto-grid -->
+  </div>
+</section>
+
+<!-- ══ BATERÍAS DE MOTO ══ -->
+<section class="cat-section cat-moto" id="motos">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag sec-tag-moto">🏍 Línea Motocicletas · 14 Modelos</div>
+      <h2 class="sec-h2">Baterías de <em class="em-moto">Moto</em></h2>
+      <p class="sec-p">Scooters, naked, sport, enduro y touring. Compatibles con Honda, Yamaha, Kawasaki, Suzuki, BMW, KTM y más. Haz clic → compra por WhatsApp al instante.</p>
+    </div>
+
+    <!-- MOTO SUB-FILTROS -->
+    <div class="sub-tabs moto-tabs" id="motoTabs">
+      <button class="stab stab-moto active" data-mcat="all">🏍 Todos</button>
+      <button class="stab stab-moto" data-mcat="scooter">🛵 Scooter</button>
+      <button class="stab stab-moto" data-mcat="sport">🏁 Sport</button>
+      <button class="stab stab-moto" data-mcat="naked">⚡ Naked / Urbana</button>
+      <button class="stab stab-moto" data-mcat="enduro">🌲 Enduro / Trail</button>
+      <button class="stab stab-moto" data-mcat="touring">🛣 Touring / Big</button>
+    </div>
+
+    <div class="cat-grid moto-grid" id="motoGrid">
+
+      <!-- SCOOTER -->
+      <article class="pcard pcard-moto" data-mcat="scooter" data-model="MF5L-BS" data-brand="FBC" data-ah="5 Ah" data-cca="65 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF5L-BS" loading="lazy"/><span class="pb pbmoto">🛵 Scooter</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF5L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>5Ah</b></div></div>
+          <p>Scooters 50–100cc · Honda Biz 100, Yamaha Neo, Kymco</p>
+          <div class="ptags"><span>⚡ 5 Ah</span><span>🔥 65 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="scooter" data-model="MF6L-BS" data-brand="Energetic" data-ah="6 Ah" data-cca="80 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF6L-BS" loading="lazy"/><span class="pb pbmoto">🛵 Scooter</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF6L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>6Ah</b></div></div>
+          <p>Scooters 110–125cc · Honda Beat, SYM, Aprilia SR</p>
+          <div class="ptags"><span>⚡ 6 Ah</span><span>🔥 80 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <!-- NAKED / URBANA -->
+      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF7L-BS" data-brand="FBC" data-ah="7 Ah" data-cca="100 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF7L-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF7L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>7Ah</b></div></div>
+          <p>Motos urbanas 110–150cc · Honda CB, Yamaha YBR, AKT</p>
+          <div class="ptags"><span>⚡ 7 Ah</span><span>🔥 100 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF9-BS" data-brand="Energetic" data-ah="9 Ah" data-cca="135 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF9-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">Energetic</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF9-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>9Ah</b></div></div>
+          <p>Naked 150–200cc · Yamaha FZ, Honda CB 190, Bajaj NS</p>
+          <div class="ptags"><span>⚡ 9 Ah</span><span>🔥 135 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF10-BS" data-brand="AUTOBAT" data-ah="10 Ah" data-cca="150 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF10-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">AUTOBAT</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF10-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>10Ah</b></div></div>
+          <p>Naked 200–250cc · Kawasaki Z250, Honda Hornet 250</p>
+          <div class="ptags"><span>⚡ 10 Ah</span><span>🔥 150 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <!-- SPORT -->
+      <article class="pcard pcard-moto" data-mcat="sport" data-model="MF12-BS" data-brand="AUTOBAT" data-ah="12 Ah" data-cca="185 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF12-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">AUTOBAT</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF12-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>185A</b></div></div>
+          <p>Sport 250–400cc · Kawasaki Ninja 300, Honda CBR 300</p>
+          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 185 A</span><span>🛡 Sellada MF</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="sport" data-model="YTX12-BS" data-brand="FBC" data-ah="10 Ah" data-cca="180 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX12-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>YTX12-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>180A</b></div></div>
+          <p>Sport 400–600cc · Yamaha R3, Kawasaki Z400, Suzuki GSX</p>
+          <div class="ptags"><span>⚡ 10 Ah</span><span>🔥 180 A</span><span>🛡 AGM Sport</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="sport" data-model="YTX14-BS" data-brand="Energetic" data-ah="12 Ah" data-cca="200 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX14-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>YTX14-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>200A</b></div></div>
+          <p>Sport 600–750cc · Honda CBR 600, Yamaha R6, Kawasaki ZX6R</p>
+          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 200 A</span><span>🛡 AGM Sport</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <!-- ENDURO / TRAIL -->
+      <article class="pcard pcard-moto" data-mcat="enduro" data-model="MF7B-4" data-brand="FBC" data-ah="7 Ah" data-cca="90 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF7B-4" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">FBC</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>MF7B-4</h3><div class="pcca pcca-moto"><span>Ah</span><b>7Ah</b></div></div>
+          <p>Enduro / Trail 200cc · Honda XR, Yamaha WR, Beta</p>
+          <div class="ptags"><span>⚡ 7 Ah</span><span>🔥 90 A</span><span>🛡 Anti-vibr.</span><span>✅ 6 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="enduro" data-model="YTX9-BS" data-brand="AUTOBAT" data-ah="8 Ah" data-cca="120 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX9-BS" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">AUTOBAT</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>YTX9-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>120A</b></div></div>
+          <p>Trail / Aventura 250–400cc · KTM Duke, Royal Enfield, CRF</p>
+          <div class="ptags"><span>⚡ 8 Ah</span><span>🔥 120 A</span><span>🛡 Anti-vibr.</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="enduro" data-model="YTZ10S" data-brand="Energetic" data-ah="8.6 Ah" data-cca="190 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTZ10S" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">Energetic</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>YTZ10S</h3><div class="pcca pcca-moto"><span>CCA</span><b>190A</b></div></div>
+          <p>Aventura 450–900cc · Honda Africa Twin, KTM Adventure</p>
+          <div class="ptags"><span>⚡ 8.6 Ah</span><span>🔥 190 A</span><span>🛡 AGM Gel</span><span>✅ 12 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <!-- TOURING / BIG -->
+      <article class="pcard pcard-moto" data-mcat="touring" data-model="YTX20L-BS" data-brand="FBC" data-ah="18 Ah" data-cca="270 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX20L-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">FBC</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>YTX20L-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>270A</b></div></div>
+          <p>Touring 1000–1300cc · Honda Gold Wing, Yamaha FJR</p>
+          <div class="ptags"><span>⚡ 18 Ah</span><span>🔥 270 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="touring" data-model="BTX14-BS" data-brand="AUTOBAT" data-ah="12 Ah" data-cca="230 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="BTX14-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">AUTOBAT</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>BTX14-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>230A</b></div></div>
+          <p>Big bike 800–1200cc · BMW R1200, Harley-Davidson, Ducati</p>
+          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 230 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+      <article class="pcard pcard-moto" data-mcat="touring" data-model="BTX16-BS" data-brand="Energetic" data-ah="14 Ah" data-cca="250 A" data-img="img/battery-moto.png">
+        <div class="pcard-img"><img src="img/battery-moto.png" alt="BTX16-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
+        <div class="pcard-body">
+          <div class="pcard-top"><h3>BTX16-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>250A</b></div></div>
+          <p>Cruiser / Custom · Harley Sportster, Indian Scout, Triumph Bonneville</p>
+          <div class="ptags"><span>⚡ 14 Ah</span><span>🔥 250 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
+        </div>
+        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
+      </article>
+
+    </div><!-- /moto-grid -->
+  </div>
+</section>
+
+<!-- ══ CONTACTO ══ -->
+<section class="contact-sec" id="contacto">
+  <div class="container">
+    <div class="contact-box">
+      <div class="contact-left">
+        <div class="sec-tag">📞 Atención Directa</div>
+        <h2 class="contact-h2">Habla con<br>un asesor</h2>
+        <p>Respuesta inmediata. Envíanos el modelo y te decimos el precio al instante.</p>
+        <div class="c-items">
+          <div class="ci"><span>📞</span><div><small>Teléfono / WhatsApp</small><strong><a href="tel:+59165302585">65302585</a></strong></div></div>
+          <div class="ci"><span>📍</span><div><small>Ubicación</small><strong>Cochabamba, Bolivia</strong></div></div>
+          <div class="ci"><span>🕐</span><div><small>Horario</small><strong>Lun–Sáb 8:00–18:00</strong></div></div>
+        </div>
+        <a href="https://wa.me/59165302585?text=Hola%2C%20quisiera%20consultar%20precios." target="_blank" class="wa-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
+          Chatear en WhatsApp
+        </a>
+      </div>
+      <div class="contact-right">
+        <form class="cform" id="cform">
+          <h3>Solicitar cotización</h3>
+          <div class="fg"><label>Nombre</label><input type="text" id="f-name" placeholder="Tu nombre" required/></div>
+          <div class="fg"><label>Teléfono</label><input type="tel" id="f-tel" placeholder="7XXXXXXX"/></div>
+          <div class="fg"><label>Tipo de vehículo</label>
+            <select id="f-veh">
+              <option value="">Selecciona…</option>
+              <option>Auto compacto / Sedan</option>
+              <option>Camioneta / SUV</option>
+              <option>Diésel / 4×4</option>
+              <option>Bus / Microbus</option>
+              <option>Camión de carga</option>
+              <option>Maquinaria pesada</option>
+              <option>Motocicleta</option>
+            </select>
+          </div>
+          <div class="fg"><label>Mensaje</label><textarea id="f-msg" rows="3" placeholder="¿Qué necesitas?"></textarea></div>
+          <button type="submit" class="btn-gold w-full" id="formBtn">Enviar por WhatsApp →</button>
+          <p class="form-ok" id="formOk" style="display:none">✅ Redirigiendo a WhatsApp…</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="CQ" class="footer-logo"/>
+        <div><span class="fn">COMERCIAL QUILLACAS</span><span class="ft">Distribución Autorizada · Bolivia</span></div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#autos">Baterías Auto</a>
+        <a href="#motos">Baterías Moto</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/59165302585" target="_blank">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="footer-bot">
+      <span>© 2025 Comercial Quillacas · Todos los derechos reservados</span>
+      <span>📞 65302585 · Cochabamba, Bolivia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ MODAL COMPRA ══ -->
+<div class="modal-bg" id="modalBg" aria-hidden="true">
+  <div class="modal-box" id="modalBox" role="dialog" aria-modal="true">
+    <button class="modal-x" id="modalX" aria-label="Cerrar">✕</button>
+    <div class="modal-img-col">
+      <img id="mImg" src="" alt="" class="modal-img"/>
+      <div class="modal-glow"></div>
+    </div>
+    <div class="modal-data">
+      <span class="modal-badge" id="mBadge"></span>
+      <h2 class="modal-model" id="mModel"></h2>
+      <div class="modal-stats">
+        <div class="mstat" id="mAh"></div>
+        <div class="mstat" id="mCca"></div>
+      </div>
+      <div class="modal-note">
+        <span>💬</span>
+        <p>Enviaremos el modelo exacto por WhatsApp y recibirás el precio de inmediato.</p>
+      </div>
+      <a class="modal-wa" id="mWa" href="#" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
+        Comprar Batería — <span id="mModelName"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CHAT WIDGET ══ -->
+<div class="chat-widget" id="chatWidget" aria-live="polite">
+
+  <!-- FAB Button -->
+  <button class="chat-fab" id="chatFab" aria-label="Abrir chat de asesoría" title="¿Tienes dudas? ¡Chatea con nosotros!">
+    <span class="chat-fab-icon chat-icon-open">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </span>
+    <span class="chat-fab-icon chat-icon-close" style="display:none">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </span>
+    <span class="chat-fab-badge" id="chatBadge">1</span>
+    <span class="chat-fab-pulse"></span>
+  </button>
+
+  <!-- Chat Panel -->
+  <div class="chat-panel" id="chatPanel" aria-hidden="true" role="dialog" aria-label="Chat de asesoría Comercial Quillacas">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="chat-header-avatar">
+        <img src="img/logo.png" alt="Comercial Quillacas" class="chat-avatar-img"/>
+        <span class="chat-avatar-dot"></span>
+      </div>
+      <div class="chat-header-info">
+        <strong>Dana</strong>
+        <span>Asesora Virtual · En línea ✨</span>
+      </div>
+      <button class="chat-header-close" id="chatClose" aria-label="Cerrar chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div class="chat-messages" id="chatMessages">
+      <!-- Messages inserted by JS -->
+    </div>
+
+    <!-- Quick Replies -->
+    <div class="chat-quick" id="chatQuick">
+      <button class="cq-btn" data-q="precios">💰 Ver precios</button>
+      <button class="cq-btn" data-q="marcas">🏷 ¿Qué marcas tienen?</button>
+      <button class="cq-btn" data-q="garantia">🛡 Garantía</button>
+      <button class="cq-btn" data-q="ubicacion">📍 Ubicación</button>
+      <button class="cq-btn" data-q="servicio">🔧 Servicio técnico</button>
+      <button class="cq-btn" data-q="whatsapp">📲 Ir a WhatsApp</button>
+    </div>
+
+    <!-- Input -->
+    <form class="chat-form" id="chatForm" autocomplete="off">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Escribe tu pregunta…" maxlength="300" aria-label="Escribe tu mensaje"/>
+      <button type="submit" class="chat-send" aria-label="Enviar mensaje">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
