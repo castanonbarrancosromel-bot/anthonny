@@ -1,801 +1,740 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Comercial Quillacas — Baterías Premium Bolivia</title>
-  <meta name="description" content="Catálogo de baterías para autos y motos. FBC, TOYO, VOLTA, Energetic, AUTOBAT, Panasonic. Cochabamba, Bolivia. ☎ 65302585"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Distribuidora Doña Delia - La mejor distribuidora de bebidas alcohólicas en Sucre, Bolivia. Cervezas, vinos, whisky, singani y más. Delivery a domicilio.">
+    <meta name="keywords"
+        content="distribuidora, bebidas, cerveza, vino, whisky, singani, Sucre, Bolivia, delivery, Doña Delia">
+    <title>Distribuidora Doña Delia | Bebidas Premium en Sucre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
+    <!-- Age Verification Gate -->
+    <div class="age-gate" id="ageGate">
+        <div class="age-gate-content">
+            <img src="img/logo.png" alt="Doña Delia Logo" onerror="this.src='img/logo.svg'">
+            <h2>¿Eres mayor de 18 años?</h2>
+            <p>Este sitio web contiene información sobre bebidas alcohólicas. Debes ser mayor de edad para ingresar.</p>
+            <div class="age-gate-buttons">
+                <button class="age-btn-yes" id="ageYes" onclick="enterSite()">Sí, soy mayor de 18</button>
+                <button class="age-btn-no" onclick="window.location.href='https://www.google.com'">No, soy
+                    menor</button>
+            </div>
+        </div>
+    </div>
 
-<!-- BG (Minimalist) -->
-<div class="bg-scene" aria-hidden="true"></div>
+    <!-- Floating Particles Background -->
+    <div class="particles-bg" id="particles"></div>
 
-<!-- ══ NAVBAR ══ -->
-<nav class="nav" id="nav">
-  <div class="nav-wrap">
-    <a href="#hero" class="nav-brand">
-      <div class="nav-logo-ring">
-        <img src="img/logo.png" alt="CQ" class="nav-logo-img"/>
-      </div>
-      <div class="nav-brand-text">
-        <span class="nbt-top">COMERCIAL</span>
-        <span class="nbt-bot">QUILLACAS</span>
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="img/logo.png" alt="Doña Delia" class="nav-logo-img" onerror="this.src='img/logo.svg'">
+                <div class="nav-logo-text">Doña <span>Delia</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="https://wa.me/59165259865" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i>
+                        Pedir Ahora</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner" style="margin-top: 70px; display: none;" id="promoBanner">
+        <div class="promo-text">
+            🍺 ¡OFERTAS ESPECIALES DE LA SEMANA! — Delivery GRATIS en toda la ciudad de Sucre — Llámanos al +591
+            65259865 — 🎉 ¡Paquetes para eventos y fiestas! 🎉
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <img src="img/logo.png" alt="Distribuidora Doña Delia" class="hero-logo"
+                    onerror="this.src='img/logo.svg'">
+            </div>
+            <div class="hero-badge">🍺 Sucre, Bolivia</div>
+            <h1>
+                Distribuidora<br>
+                <span class="text-gold">Doña Delia</span>
+            </h1>
+            <p class="hero-subtitle">
+                Tu distribuidora de confianza en la ciudad de Sucre. Las mejores bebidas alcohólicas con delivery a
+                domicilio. Cervezas, vinos, whisky, singani y mucho más.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/59165259865?text=Hola%20Doña%20Delia%2C%20quiero%20hacer%20un%20pedido"
+                    target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+                <a href="#productos" class="btn btn-outline">
+                    <i class="fas fa-wine-bottle"></i> Ver Productos
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="nosotros">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal-left">
+                    <div class="about-image-accent"></div>
+                    <img src="img/cervezas_variadas.png" alt="Nuestros Productos" class="about-image">
+                    <div class="about-image-accent-2"></div>
+                </div>
+                <div class="about-text reveal-right">
+                    <div class="section-badge">Nuestra Historia</div>
+                    <h3>Más de una década sirviendo a Sucre</h3>
+                    <p>
+                        En <strong>Distribuidora Doña Delia</strong>, somos una empresa familiar dedicada a la
+                        distribución de las mejores bebidas alcohólicas en la hermosa ciudad de Sucre, capital
+                        constitucional de Bolivia.
+                    </p>
+                    <p>
+                        Nos especializamos en ofrecer una amplia variedad de cervezas nacionales e importadas, vinos
+                        selectos, whisky premium, singani boliviano y una extensa gama de licores para satisfacer todos
+                        los gustos y ocasiones.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🚚</div>
+                            <div class="about-feature-text">Delivery a domicilio</div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">💰</div>
+                            <div class="about-feature-text">Mejores precios</div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🍺</div>
+                            <div class="about-feature-text">Gran variedad</div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🎉</div>
+                            <div class="about-feature-text">Paquetes para eventos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats">
+        <div class="section-container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Productos Disponibles</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Pedidos Entregados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="productos">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-badge">Catálogo</div>
+                <h2 class="section-title">Nuestros <span class="gold">Productos</span></h2>
+                <p class="section-subtitle">Descubre nuestra selección premium de bebidas alcohólicas. Calidad
+                    garantizada y los mejores precios de Sucre.</p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap;"
+                class="reveal">
+                <button class="product-filter-btn active" onclick="filterProducts('todos')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(212,160,60,0.3); background: linear-gradient(135deg, var(--red-primary), var(--red-dark)); color: white; font-family: var(--font-body); font-weight: 600; cursor: pointer; transition: all 0.3s;">Todos</button>
+                <button class="product-filter-btn" onclick="filterProducts('cerveza')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); background: var(--black-card); color: var(--gray-light); font-family: var(--font-body); font-weight: 500; cursor: pointer; transition: all 0.3s;">🍺
+                    Cervezas</button>
+                <button class="product-filter-btn" onclick="filterProducts('whisky')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); background: var(--black-card); color: var(--gray-light); font-family: var(--font-body); font-weight: 500; cursor: pointer; transition: all 0.3s;">🥃
+                    Whisky</button>
+                <button class="product-filter-btn" onclick="filterProducts('vino')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); background: var(--black-card); color: var(--gray-light); font-family: var(--font-body); font-weight: 500; cursor: pointer; transition: all 0.3s;">🍷
+                    Vinos</button>
+                <button class="product-filter-btn" onclick="filterProducts('singani')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); background: var(--black-card); color: var(--gray-light); font-family: var(--font-body); font-weight: 500; cursor: pointer; transition: all 0.3s;">🍸
+                    Singani</button>
+                <button class="product-filter-btn" onclick="filterProducts('ron')"
+                    style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); background: var(--black-card); color: var(--gray-light); font-family: var(--font-body); font-weight: 500; cursor: pointer; transition: all 0.3s;">🥃
+                    Ron</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Product Card 1 - Paceña -->
+                <div class="product-card reveal" data-category="cerveza">
+                    <div class="product-card-badge popular">⭐ Popular</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/cerveza_pacena.png" alt="Cerveza Paceña">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cerveza Nacional</div>
+                        <h3 class="product-name">Cerveza Paceña</h3>
+                        <p class="product-description">La cerveza boliviana por excelencia. Refrescante sabor que nos
+                            identifica como nación. Disponible en botella y lata.</p>
+                        <div class="product-price">Bs. 12 <small>/ unidad</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary" onclick="orderProduct('Cerveza Paceña')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Cerveza Paceña', 'La cerveza boliviana más querida. Disponible en botellas de 620ml y latas de 354ml. Ideal para reuniones y celebraciones.', 'Bs. 12')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 - Huari -->
+                <div class="product-card reveal" data-category="cerveza">
+                    <div class="product-card-badge">Nuevo</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/cerveza_pacena.png" alt="Cerveza Huari">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cerveza Premium</div>
+                        <h3 class="product-name">Cerveza Huari</h3>
+                        <p class="product-description">Cerveza premium boliviana con carácter único. Elaborada con los
+                            mejores ingredientes del altiplano.</p>
+                        <div class="product-price">Bs. 14 <small>/ unidad</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary" onclick="orderProduct('Cerveza Huari')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Cerveza Huari', 'Cerveza premium boliviana de sabor intenso. Disponible en botellas de 620ml. Una experiencia cervecera diferente.', 'Bs. 14')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 - Whisky -->
+                <div class="product-card reveal" data-category="whisky">
+                    <div class="product-card-badge popular">⭐ Premium</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/whisky.png" alt="Whisky Red Label">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Whisky Importado</div>
+                        <h3 class="product-name">Johnnie Walker Red Label</h3>
+                        <p class="product-description">El whisky escocés más vendido del mundo. Sabor audaz y especiado,
+                            perfecto para mezclar o disfrutar solo.</p>
+                        <div class="product-price">Bs. 180 <small>/ botella</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary"
+                                onclick="orderProduct('Johnnie Walker Red Label')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Johnnie Walker Red Label', 'Whisky escocés blended de 750ml. Notas de canela y pimienta. El favorito para celebraciones especiales.', 'Bs. 180')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 - Singani -->
+                <div class="product-card reveal" data-category="singani">
+                    <div class="product-card-badge">Nacional</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/singani.png" alt="Singani">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Singani Boliviano</div>
+                        <h3 class="product-name">Singani Casa Real</h3>
+                        <p class="product-description">El destilado insignia de Bolivia, elaborado con uva moscatel de
+                            Alejandría cultivada en los valles de Tarija.</p>
+                        <div class="product-price">Bs. 65 <small>/ botella</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary" onclick="orderProduct('Singani Casa Real')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Singani Casa Real', 'Singani premium boliviano de 750ml. Destilado de uva moscatel. Perfecto para chuflay y cocteles.', 'Bs. 65')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 - Cervezas Pack -->
+                <div class="product-card reveal" data-category="cerveza">
+                    <div class="product-card-badge popular">🔥 Oferta</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/cervezas_variadas.png" alt="Pack de Cervezas">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Pack Especial</div>
+                        <h3 class="product-name">Pack Fiesta 12 Cervezas</h3>
+                        <p class="product-description">Pack de 12 cervezas variadas nacionales. Incluye Paceña, Huari y
+                            más. ¡Ideal para tu próxima reunión!</p>
+                        <div class="product-price">Bs. 120 <small>/ pack</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary"
+                                onclick="orderProduct('Pack Fiesta 12 Cervezas')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Pack Fiesta 12 Cervezas', '12 cervezas variadas ideales para fiestas y reuniones. Ahorra con nuestros packs especiales. Delivery incluido.', 'Bs. 120')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 - Vino -->
+                <div class="product-card reveal" data-category="vino">
+                    <div class="product-image-wrapper">
+                        <img src="img/whisky.png" alt="Vino Tinto Premium"
+                            style="filter: hue-rotate(280deg) brightness(0.8);">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Vinos Selectos</div>
+                        <h3 class="product-name">Vino Tinto Reserva</h3>
+                        <p class="product-description">Vino tinto de alta calidad con notas frutales intensas. Perfecto
+                            para acompañar carnes y quesos.</p>
+                        <div class="product-price">Bs. 85 <small>/ botella</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary"
+                                onclick="orderProduct('Vino Tinto Reserva')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Vino Tinto Reserva', 'Vino tinto reserva de 750ml. Aromas a frutas rojas maduras. Ideal para cenas especiales y momentos románticos.', 'Bs. 85')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 - Ron -->
+                <div class="product-card reveal" data-category="ron">
+                    <div class="product-image-wrapper">
+                        <img src="img/whisky.png" alt="Ron Premium" style="filter: saturate(1.3) brightness(0.9);">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Ron Premium</div>
+                        <h3 class="product-name">Ron Añejo Reserva</h3>
+                        <p class="product-description">Ron añejo de sabor suave y complejo, con notas de vainilla y
+                            caramelo. Perfecto para disfrutar solo o en cócteles.</p>
+                        <div class="product-price">Bs. 95 <small>/ botella</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary" onclick="orderProduct('Ron Añejo Reserva')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Ron Añejo Reserva', 'Ron añejo premium de 750ml. Envejecido en barricas de roble. Notas suaves de vainilla y caramelo.', 'Bs. 95')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 - Singani 2 -->
+                <div class="product-card reveal" data-category="singani">
+                    <div class="product-image-wrapper">
+                        <img src="img/singani.png" alt="Singani San Pedro"
+                            style="filter: brightness(1.1) contrast(1.05);">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Singani Boliviano</div>
+                        <h3 class="product-name">Singani San Pedro de Oro</h3>
+                        <p class="product-description">Singani popular boliviano, favorito para el tradicional chuflay.
+                            Calidad y tradición en cada gota.</p>
+                        <div class="product-price">Bs. 35 <small>/ botella</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary"
+                                onclick="orderProduct('Singani San Pedro de Oro')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Singani San Pedro de Oro', 'Singani boliviano popular de 750ml. Ideal para preparar chuflay y otros cócteles nacionales.', 'Bs. 35')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 9 - Cerveza Importada -->
+                <div class="product-card reveal" data-category="cerveza">
+                    <div class="product-card-badge">Importada</div>
+                    <div class="product-image-wrapper">
+                        <img src="img/cerveza_pacena.png" alt="Cerveza Corona"
+                            style="filter: brightness(1.1) saturate(1.2);">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cerveza Importada</div>
+                        <h3 class="product-name">Cerveza Corona Extra</h3>
+                        <p class="product-description">La cerveza mexicana más famosa del mundo. Ligera y refrescante,
+                            perfecta con un toque de limón.</p>
+                        <div class="product-price">Bs. 18 <small>/ unidad</small></div>
+                        <div class="product-action">
+                            <button class="product-btn product-btn-primary" onclick="orderProduct('Corona Extra')">
+                                <i class="fab fa-whatsapp"></i> Pedir
+                            </button>
+                            <button class="product-btn product-btn-secondary"
+                                onclick="showDetails('Corona Extra', 'Cerveza premium mexicana de 355ml. Sabor ligero y refrescante. Con rodaja de limón es una experiencia única.', 'Bs. 18')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;" class="reveal">
+                <a href="https://wa.me/59165259865?text=Hola%20Doña%20Delia%2C%20quisiera%20ver%20el%20catálogo%20completo"
+                    target="_blank" class="btn btn-primary" style="font-size: 1.1rem;">
+                    <i class="fab fa-whatsapp"></i> Ver Catálogo Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="galeria">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-badge">Galería</div>
+                <h2 class="section-title">Nuestro <span class="gold">Mundo</span></h2>
+                <p class="section-subtitle">Momentos, productos y la esencia de nuestra distribuidora en la ciudad
+                    blanca de Sucre.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/cerveza_pacena.png" alt="Cervezas en Doña Delia">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">🍺 Cervezas Premium</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/whisky.png" alt="Whisky Premium">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">🥃 Whisky Selecto</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/cervezas_variadas.png" alt="Variedad de Bebidas">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">🎉 Variedad para Fiestas</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/singani.png" alt="Singani Boliviano">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">🍸 Singani Boliviano</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/hero_bg.png" alt="Nuestra Distribuidora">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">📸 Nuestra Distribuidora</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="img/cerveza_pacena.png" alt="Delivery a Domicilio"
+                        style="filter: brightness(0.8) saturate(1.2);">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-text">🚚 Delivery a Domicilio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section location" id="ubicacion">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-badge">Encuéntranos</div>
+                <h2 class="section-title">Nuestra <span class="gold">Ubicación</span></h2>
+                <p class="section-subtitle">Visítanos en nuestra distribuidora en la hermosa ciudad de Sucre, la capital
+                    constitucional de Bolivia.</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="map-container reveal-left">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60568.56789!2d-65.285!3d-19.0453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbe0089e8b4939%3A0x8fbd1f0b5c5d7d6f!2sSucre%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="location-info reveal-right">
+                    <div class="location-card">
+                        <div class="location-icon">📍</div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Ciudad de Sucre, Chuquisaca, Bolivia</p>
+                            <a href="https://maps.google.com/?q=Sucre,Bolivia" target="_blank">Ver en Google Maps →</a>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="location-icon">📞</div>
+                        <div>
+                            <h4>Teléfono / WhatsApp</h4>
+                            <p><a href="tel:+59165259865">+591 65259865</a></p>
+                            <a href="https://wa.me/59165259865" target="_blank">Enviar mensaje por WhatsApp →</a>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="location-icon">🕐</div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Sábado: 8:00 AM - 10:00 PM</p>
+                            <p>Domingos: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="location-icon">🚚</div>
+                        <div>
+                            <h4>Delivery</h4>
+                            <p>Entrega a domicilio en toda la ciudad de Sucre</p>
+                            <p style="color: var(--gold-light); font-weight: 600;">¡Delivery GRATIS en pedidos mayores!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contacto">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-badge">Contáctanos</div>
+                <h2 class="section-title">¿Listo para <span class="gold">Pedir?</span></h2>
+                <p class="section-subtitle">Escríbenos por WhatsApp o llámanos para hacer tu pedido. ¡Atendemos con la
+                    rapidez que te mereces!</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <h3>Hablemos, <span class="gold">te atendemos ahora</span></h3>
+                    <p>En Distribuidora Doña Delia estamos listos para atenderte. Haz tu pedido por WhatsApp o llámanos
+                        directamente. También atendemos pedidos especiales para eventos, fiestas y celebraciones.</p>
+
+                    <div class="contact-methods">
+                        <a href="https://wa.me/59165259865?text=Hola%20Doña%20Delia%2C%20quiero%20hacer%20un%20pedido"
+                            target="_blank" class="contact-method">
+                            <div class="contact-method-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>WhatsApp</h4>
+                                <p>+591 65259865 • Respuesta inmediata</p>
+                            </div>
+                        </a>
+                        <a href="tel:+59165259865" class="contact-method">
+                            <div class="contact-method-icon phone">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>Llamar Ahora</h4>
+                                <p>+591 65259865</p>
+                            </div>
+                        </a>
+                        <a href="https://maps.google.com/?q=Sucre,Bolivia" target="_blank" class="contact-method">
+                            <div class="contact-method-icon location">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>Visítanos</h4>
+                                <p>Sucre, Chuquisaca, Bolivia</p>
+                            </div>
+                        </a>
+                        <div class="contact-method">
+                            <div class="contact-method-icon hours">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>Horario</h4>
+                                <p>Lun-Sáb: 8AM-10PM | Dom: 9AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card reveal-right">
+                    <h3>📩 Envíanos un Mensaje</h3>
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="nombre">Tu Nombre</label>
+                            <input type="text" id="nombre" placeholder="¿Cómo te llamas?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" placeholder="+591 ..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="producto">¿Qué producto te interesa?</label>
+                            <select id="producto">
+                                <option value="">Selecciona un producto</option>
+                                <option value="Cerveza Paceña">Cerveza Paceña</option>
+                                <option value="Cerveza Huari">Cerveza Huari</option>
+                                <option value="Whisky">Whisky</option>
+                                <option value="Singani">Singani</option>
+                                <option value="Vinos">Vinos</option>
+                                <option value="Ron">Ron</option>
+                                <option value="Pack Fiesta">Pack para Fiesta</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" placeholder="Cuéntanos qué necesitas..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="margin-bottom: 5px;">
+                        <img src="img/logo.png" alt="Doña Delia" class="nav-logo-img" onerror="this.src='img/logo.svg'">
+                        <div class="nav-logo-text" style="font-size: 1.5rem;">Doña <span>Delia</span></div>
+                    </div>
+                    <p>Tu distribuidora de confianza en Sucre, Bolivia. Las mejores bebidas alcohólicas con delivery a
+                        domicilio.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/59165259865" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#productos">Cervezas</a></li>
+                        <li><a href="#productos">Whisky</a></li>
+                        <li><a href="#productos">Singani</a></li>
+                        <li><a href="#productos">Vinos</a></li>
+                        <li><a href="#productos">Ron</a></li>
+                        <li><a href="#productos">Packs Fiesta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="https://wa.me/59165259865" target="_blank"><i class="fab fa-whatsapp"></i> +591
+                                65259865</a></li>
+                        <li><a href="tel:+59165259865"><i class="fas fa-phone"></i> Llamar</a></li>
+                        <li><a href="https://maps.google.com/?q=Sucre,Bolivia" target="_blank"><i
+                                    class="fas fa-map-marker-alt"></i> Sucre, Bolivia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Distribuidora <span class="gold">Doña Delia</span>. Todos los derechos reservados. Sucre,
+                    Bolivia.</p>
+                <p style="margin-top: 8px; font-size: 0.75rem;">El consumo excesivo de alcohol es perjudicial para la
+                    salud. Prohibida la venta a menores de 18 años.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/59165259865?text=Hola%20Doña%20Delia%2C%20quiero%20hacer%20un%20pedido" target="_blank"
+        class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-float-tooltip">¡Haz tu pedido ahora!</div>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#hero"      class="nl">Inicio</a></li>
-      <li><a href="#servicio"  class="nl nl-service">🔧 Servicio Técnico</a></li>
-      <li><a href="#autos"    class="nl">Baterías Auto</a></li>
-      <li><a href="#motos"    class="nl">Baterías Moto</a></li>
-      <li><a href="#contacto" class="nl">Contacto</a></li>
-      <li><a href="https://wa.me/59165302585" target="_blank" class="nl nl-wa">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
-        WhatsApp
-      </a></li>
-    </ul>
-    <button class="burger" id="burger" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
 
-<!-- ══ HERO ══ -->
-<section class="hero" id="hero">
-  <div class="hero-wrap">
-    <div class="hero-copy">
-      <div class="hero-pill"><span class="pill-dot"></span>Distribución Autorizada · Cochabamba, Bolivia</div>
-      <h1 class="hero-h1">La batería que<br><em>tu vehículo</em><br>necesita</h1>
-      <p class="hero-p">Catálogo completo de acumuladores para autos y motos. 6 marcas líderes, garantía real, entrega inmediata.</p>
-      <div class="hero-stats">
-        <div class="hs"><strong data-count="26">0</strong><span>Modelos</span></div>
-        <div class="hs-sep"></div>
-        <div class="hs"><strong data-count="6">0</strong><span>Marcas</span></div>
-        <div class="hs-sep"></div>
-        <div class="hs"><strong>200Ah</strong><span>Máx.</span></div>
-      </div>
-      <div class="hero-btns">
-        <a href="#autos" class="btn-gold">Ver Baterías Auto →</a>
-        <a href="#motos" class="btn-outline">🏍 Ver Motos</a>
-      </div>
-    </div>
-    <div class="hero-vis">
-      <img src="img/hero-battery.png" alt="Batería premium" class="hv-img"/>
-    </div>
-  </div>
-</section>
-<!-- ══ SERVICIO TÉCNICO ══ -->
-<section class="srv-section" id="servicio">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-tag sec-tag-srv">🔧 Taller Especializado</div>
-      <h2 class="sec-h2">Servicio <em class="em-srv">Técnico</em> de Baterías</h2>
-      <p class="sec-p">Diagnóstico, reparación y mantenimiento profesional. Técnicos certificados con equipos de última generación en Cochabamba.</p>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <img src="" alt="Imagen ampliada" id="lightboxImg">
     </div>
 
-    <!-- TARJETAS DE SERVICIO -->
-    <div class="srv-grid">
-
-      <div class="srv-card" id="srv-diagnostico">
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">🔍</span>
+    <!-- Product Details Modal -->
+    <div id="productModal"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.95);z-index:9998;display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
+        <div
+            style="background:var(--black-card);border-radius:24px;padding:40px;max-width:500px;width:90%;border:1px solid var(--gold-primary);box-shadow:0 0 60px rgba(212,160,60,0.2);text-align:center;position:relative;">
+            <button onclick="closeModal()"
+                style="position:absolute;top:15px;right:15px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:transparent;color:white;font-size:1.2rem;cursor:pointer;">✕</button>
+            <h3 id="modalTitle"
+                style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:15px;color:var(--gold-light);">
+            </h3>
+            <p id="modalDescription" style="color:var(--gray-light);margin-bottom:20px;line-height:1.7;"></p>
+            <p id="modalPrice" style="font-size:1.8rem;font-weight:800;color:var(--gold-light);margin-bottom:25px;"></p>
+            <a id="modalOrderBtn" href="#" target="_blank" class="btn btn-whatsapp"
+                style="width:100%;justify-content:center;text-decoration:none;">
+                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+            </a>
         </div>
-        <h3>Diagnóstico de Batería</h3>
-        <p>Prueba de carga, voltaje y capacidad real con equipo digital. Detectamos fallas internas antes de que dejes varado tu vehículo.</p>
-        <ul class="srv-list">
-          <li>✔ Prueba de arranque en frío (CCA)</li>
-          <li>✔ Análisis de sulfatación</li>
-          <li>✔ Revisión de terminales y celdas</li>
-          <li>✔ Informe técnico gratuito</li>
-        </ul>
-        <div class="srv-price">Diagnóstico <strong>GRATIS</strong></div>
-        <button class="srv-wa-btn" data-srv="Diagnóstico de Batería">📲 Agendar Diagnóstico</button>
-      </div>
-
-      <div class="srv-card" id="srv-carga">
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">⚡</span>
-        </div>
-        <h3>Carga y Recuperación</h3>
-        <p>Recargamos baterías descargadas con cargadores inteligentes de pulso. Recuperamos hasta un 85% de baterías dadas por muertas.</p>
-        <ul class="srv-list">
-          <li>✔ Carga lenta profunda</li>
-          <li>✔ Desulfatación por pulso eléctrico</li>
-          <li>✔ Recuperación de baterías AGM</li>
-          <li>✔ Hasta 12h de carga controlada</li>
-        </ul>
-        <div class="srv-price">Desde <strong>Bs. 30</strong></div>
-        <button class="srv-wa-btn" data-srv="Carga y Recuperación de Batería">📲 Consultar Precio</button>
-      </div>
-
-      <div class="srv-card srv-card-featured" id="srv-reparacion">
-        <div class="srv-feat-glow"></div>
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">🔩</span>
-        </div>
-        <div class="srv-badge-top">⭐ Más Solicitado</div>
-        <h3>Reparación de Batería</h3>
-        <p>Reparamos celdas dañadas, soldamos bornes sueltos y reemplazamos placas deterioradas. Extendemos la vida útil de tu batería.</p>
-        <ul class="srv-list">
-          <li>✔ Reemplazo de celdas dañadas</li>
-          <li>✔ Soldadura de bornes y terminales</li>
-          <li>✔ Sellado y reconstrucción de carcasa</li>
-          <li>✔ Prueba final garantizada</li>
-        </ul>
-        <div class="srv-price">Desde <strong>Bs. 80</strong></div>
-        <button class="srv-wa-btn" data-srv="Reparación de Batería">📲 Solicitar Reparación</button>
-      </div>
-
-      <div class="srv-card" id="srv-mantenimiento">
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">🛡</span>
-        </div>
-        <h3>Mantenimiento Preventivo</h3>
-        <p>Servicio periódico para flotas empresariales y vehículos de trabajo. Evita imprevistos y maximiza la vida útil de tus acumuladores.</p>
-        <ul class="srv-list">
-          <li>✔ Limpieza de terminales con anticorrosión</li>
-          <li>✔ Revisión de nivel de electrolito</li>
-          <li>✔ Control de carga del alternador</li>
-          <li>✔ Contrato mensual para flotas</li>
-        </ul>
-        <div class="srv-price">Plan flota desde <strong>Bs. 150/mes</strong></div>
-        <button class="srv-wa-btn" data-srv="Mantenimiento Preventivo de Batería">📲 Plan de Mantenimiento</button>
-      </div>
-
-      <div class="srv-card" id="srv-electrolito">
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">💧</span>
-        </div>
-        <h3>Reposición de Electrolito</h3>
-        <p>Reponemos agua destilada y ácido sulfúrico con la densidad exacta. Ideal para baterías de plomo abiertas en buen estado.</p>
-        <ul class="srv-list">
-          <li>✔ Agua destilada certificada</li>
-          <li>✔ Calibración de densidad (densímetro)</li>
-          <li>✔ Servicio para motos y autos</li>
-          <li>✔ Asesoría de mantenimiento</li>
-        </ul>
-        <div class="srv-price">Desde <strong>Bs. 20</strong></div>
-        <button class="srv-wa-btn" data-srv="Reposición de Electrolito">📲 Consultar</button>
-      </div>
-
-      <div class="srv-card" id="srv-instalacion">
-        <div class="srv-icon-wrap">
-          <div class="srv-icon-bg"></div>
-          <span class="srv-icon">🚗</span>
-        </div>
-        <h3>Instalación de Batería</h3>
-        <p>Instalamos tu batería nueva correctamente, sin riesgo de daños al sistema eléctrico. Incluye verificación del alternador.</p>
-        <ul class="srv-list">
-          <li>✔ Instalación segura y rápida</li>
-          <li>✔ Verificación de polaridad</li>
-          <li>✔ Reset de computadora (si aplica)</li>
-          <li>✔ Prueba de arranque final</li>
-        </ul>
-        <div class="srv-price">Instalación <strong>GRATIS</strong> con compra</div>
-        <button class="srv-wa-btn" data-srv="Instalación de Batería">📲 Agendar Instalación</button>
-      </div>
-
-    </div><!-- /srv-grid -->
-
-    <!-- PROCESO PASO A PASO -->
-    <div class="srv-process">
-      <h3 class="srv-proc-title">¿Cómo funciona?</h3>
-      <div class="srv-steps">
-        <div class="srv-step">
-          <div class="srv-step-num">1</div>
-          <h4>Contáctanos</h4>
-          <p>Escríbenos por WhatsApp o llámanos al 65302585 para agendar tu visita.</p>
-        </div>
-        <div class="srv-step-arrow">→</div>
-        <div class="srv-step">
-          <div class="srv-step-num">2</div>
-          <h4>Diagnóstico</h4>
-          <p>Evaluamos tu batería con equipos digitales en minutos. El diagnóstico es GRATIS.</p>
-        </div>
-        <div class="srv-step-arrow">→</div>
-        <div class="srv-step">
-          <div class="srv-step-num">3</div>
-          <h4>Servicio</h4>
-          <p>Realizamos el servicio acordado: reparación, carga, mantenimiento o instalación.</p>
-        </div>
-        <div class="srv-step-arrow">→</div>
-        <div class="srv-step">
-          <div class="srv-step-num">4</div>
-          <h4>Garantía</h4>
-          <p>Entregamos con garantía escrita y prueba de funcionamiento en tu vehículo.</p>
-        </div>
-      </div>
     </div>
 
-    <!-- CTA CENTRAL -->
-    <div class="srv-cta">
-      <div class="srv-cta-inner">
-        <h3>¿Tu batería no arranca? <em>Podemos ayudarte.</em></h3>
-        <p>Atención inmediata en Cochabamba · Lun–Sáb 8:00–18:00</p>
-        <a href="https://wa.me/59165302585?text=Hola%2C%20necesito%20servicio%20t%C3%A9cnico%20para%20mi%20bater%C3%ADa." target="_blank" class="srv-cta-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
-          Solicitar Servicio Técnico Ahora
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ MARQUEE MARCAS ══ -->
-<div class="marquee-section">
-  <div class="marquee-fade left"></div>
-  <div class="marquee-fade right"></div>
-  <div class="marquee-track">
-    <div class="mt-inner" id="marqueeInner">
-      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> FBC</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Energetic</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> TOYO</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> VOLTA</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> AUTOBAT</span>
-      <span class="mi"><b style="color:var(--red2)">●</b> Panasonic</span>
-    </div>
-  </div>
-</div>
-
-<!-- ══ BATERÍAS DE AUTO ══ -->
-<section class="cat-section" id="autos">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-tag">🚗 Línea Automotriz</div>
-      <h2 class="sec-h2">Baterías de <em>Auto</em></h2>
-      <p class="sec-p">Desde compactos hasta tractocamiones. Haz clic en una batería → compra directamente por WhatsApp.</p>
-    </div>
-
-    <!-- SUB-FILTROS AUTOS -->
-    <div class="sub-tabs" id="autoTabs">
-      <button class="stab active" data-cat="liviano">🚗 Livianos</button>
-      <button class="stab" data-cat="suv">🚙 Camionetas / SUV</button>
-      <button class="stab" data-cat="pesado">🚛 Pesados</button>
-      <button class="stab" data-cat="agm">🔩 AGM / Diésel</button>
-      <button class="stab" data-cat="premium">⭐ Premium</button>
-    </div>
-
-    <div class="cat-grid auto-grid" id="autoGrid">
-
-      <!-- LIVIANOS -->
-      <article class="pcard" data-auto="liviano" data-model="NS40ZL" data-brand="FBC" data-ah="35–40 Ah" data-cca="350 A" data-img="img/battery-liviano.png">
-        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS40ZL" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>NS40ZL</h3><div class="pcca"><span>CCA</span><b>350A</b></div></div>
-          <p>Autos compactos &lt;1.3L · Uso urbano diario</p>
-          <div class="ptags"><span>⚡ 35–40 Ah</span><span>🔥 350 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="liviano" data-model="NS60L" data-brand="FBC" data-ah="45–55 Ah" data-cca="450 A" data-img="img/battery-liviano.png">
-        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS60L" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>NS60L</h3><div class="pcca"><span>CCA</span><b>450A</b></div></div>
-          <p>Sedanes y hatches 1.4–2.0L · Más vendido</p>
-          <div class="ptags"><span>⚡ 45–55 Ah</span><span>🔥 450 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="liviano" data-model="NS50L" data-brand="TOYO" data-ah="50–55 Ah" data-cca="470 A" data-img="img/battery-liviano.png">
-        <div class="pcard-img"><img src="img/battery-liviano.png" alt="NS50L" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">TOYO</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>NS50L</h3><div class="pcca"><span>CCA</span><b>470A</b></div></div>
-          <p>Autos modernos con start-stop · Alta recuperación</p>
-          <div class="ptags"><span>⚡ 50–55 Ah</span><span>🔥 470 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="liviano" data-model="B145" data-brand="Energetic" data-ah="45–50 Ah" data-cca="420 A" data-img="img/battery-liviano.png">
-        <div class="pcard-img"><img src="img/battery-liviano.png" alt="B145" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">Energetic</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>B145</h3><div class="pcca"><span>CCA</span><b>420A</b></div></div>
-          <p>Importados asiáticos · Bandeja específica</p>
-          <div class="ptags"><span>⚡ 45–50 Ah</span><span>🔥 420 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="liviano" data-model="AUTOBAT 55" data-brand="AUTOBAT" data-ah="55 Ah" data-cca="500 A" data-img="img/battery-liviano.png">
-        <div class="pcard-img"><img src="img/battery-liviano.png" alt="AUTOBAT 55" loading="lazy"/><span class="pb pbliv">Liviano</span><span class="pb-brand">AUTOBAT</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>AUTOBAT 55</h3><div class="pcca"><span>CCA</span><b>500A</b></div></div>
-          <p>Económica y confiable · Uso urbano cotidiano</p>
-          <div class="ptags"><span>⚡ 55 Ah</span><span>🔥 500 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <!-- SUV -->
-      <article class="pcard" data-auto="suv" data-model="NS70L" data-brand="FBC" data-ah="70–75 Ah" data-cca="600 A" data-img="img/battery-suv.png">
-        <div class="pcard-img"><img src="img/battery-suv.png" alt="NS70L" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>NS70L / N70</h3><div class="pcca"><span>CCA</span><b>600A</b></div></div>
-          <p>Camionetas medianas 2.4L+ · Estándar japonés</p>
-          <div class="ptags"><span>⚡ 70–75 Ah</span><span>🔥 600 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="suv" data-model="BT54" data-brand="TOYO" data-ah="55–60 Ah" data-cca="500 A" data-img="img/battery-suv.png">
-        <div class="pcard-img"><img src="img/battery-suv.png" alt="BT54" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">TOYO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>BT54</h3><div class="pcca"><span>CCA</span><b>500A</b></div></div>
-          <p>Camionetas con equipo eléctrico extra · LED, cámara</p>
-          <div class="ptags"><span>⚡ 55–60 Ah</span><span>🔥 500 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="suv" data-model="BT70" data-brand="Energetic" data-ah="70–75 Ah" data-cca="620 A" data-img="img/battery-suv.png">
-        <div class="pcard-img"><img src="img/battery-suv.png" alt="BT70" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">Energetic</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>BT70</h3><div class="pcca"><span>CCA</span><b>620A</b></div></div>
-          <p>Camioneta estándar · Alta durabilidad ciclo largo</p>
-          <div class="ptags"><span>⚡ 70–75 Ah</span><span>🔥 620 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="suv" data-model="80D31R" data-brand="VOLTA" data-ah="75–80 Ah" data-cca="700 A" data-img="img/battery-suv.png">
-        <div class="pcard-img"><img src="img/battery-suv.png" alt="80D31R" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">VOLTA</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>80D31R</h3><div class="pcca"><span>CCA</span><b>700A</b></div></div>
-          <p>Diésel y 4×4 · Máx. arranque en frío</p>
-          <div class="ptags"><span>⚡ 75–80 Ah</span><span>🔥 700 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="suv" data-model="NS80D26L" data-brand="Panasonic" data-ah="70–80 Ah" data-cca="680 A" data-img="img/battery-suv.png">
-        <div class="pcard-img"><img src="img/battery-suv.png" alt="NS80D26L" loading="lazy"/><span class="pb pbsuv">SUV</span><span class="pb-brand">Panasonic</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>NS80D26L</h3><div class="pcca"><span>CCA</span><b>680A</b></div></div>
-          <p>Toyota Hilux, Land Cruiser Prado · Tecnología japonesa</p>
-          <div class="ptags"><span>⚡ 70–80 Ah</span><span>🔥 680 A</span><span>✅ 24 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <!-- PESADOS -->
-      <article class="pcard" data-auto="pesado" data-model="N100" data-brand="FBC" data-ah="100 Ah" data-cca="850 A" data-img="img/battery-heavy.png">
-        <div class="pcard-img"><img src="img/battery-heavy.png" alt="N100" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>N100</h3><div class="pcca pcca-red"><span>CCA</span><b>850A</b></div></div>
-          <p>Microbuses y camiones urbanos ligeros</p>
-          <div class="ptags"><span>⚡ 100 Ah</span><span>🔥 850 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="pesado" data-model="N120" data-brand="Energetic" data-ah="120 Ah" data-cca="950 A" data-img="img/battery-heavy.png">
-        <div class="pcard-img"><img src="img/battery-heavy.png" alt="N120" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">Energetic</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>N120</h3><div class="pcca pcca-red"><span>CCA</span><b>950A</b></div></div>
-          <p>Camiones de carga y buses de transporte</p>
-          <div class="ptags"><span>⚡ 120 Ah</span><span>🔥 950 A</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="pesado" data-model="N150" data-brand="VOLTA" data-ah="150 Ah" data-cca="1100 A" data-img="img/battery-pesado.png">
-        <div class="pcard-img"><img src="img/battery-pesado.png" alt="N150" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">VOLTA</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>N150</h3><div class="pcca pcca-red"><span>CCA</span><b>1100A</b></div></div>
-          <p>Flotas de transporte interdepartamental</p>
-          <div class="ptags"><span>⚡ 150 Ah</span><span>🔥 1100 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-star" data-auto="pesado" data-model="N200" data-brand="FBC" data-ah="200 Ah" data-cca="1400 A" data-img="img/battery-pesado.png">
-        <div class="pcard-glow"></div>
-        <div class="pcard-img"><img src="img/battery-pesado.png" alt="N200" loading="lazy"/><span class="pb pbpes">Pesado</span><span class="pb-brand">FBC</span><span class="pb-top">⚡ Máx. Potencia</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>N200</h3><div class="pcca pcca-gold"><span>CCA</span><b>1400A</b></div></div>
-          <p>Tractocamiones y maquinaria pesada · El más potente</p>
-          <div class="ptags"><span>⚡ 200 Ah</span><span>🔥 1400 A</span><span>✅ 24 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-gold">Ver y Comprar →</button>
-      </article>
-
-      <!-- AGM -->
-      <article class="pcard" data-auto="agm" data-model="AGM 70D" data-brand="VOLTA" data-ah="70 Ah" data-cca="720 A" data-img="img/battery-agm.png">
-        <div class="pcard-img"><img src="img/battery-agm.png" alt="AGM 70D" loading="lazy"/><span class="pb pbagm">AGM</span><span class="pb-brand">VOLTA</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>AGM 70D</h3><div class="pcca pcca-cyan"><span>CCA</span><b>720A</b></div></div>
-          <p>Start-Stop · BMW, Mercedes, VW · Sin derrame</p>
-          <div class="ptags"><span>⚡ 70 Ah</span><span>🔥 720 A</span><span>✅ 24 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-cyan">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard" data-auto="agm" data-model="HD Diesel 120" data-brand="TOYO" data-ah="120 Ah" data-cca="1000 A" data-img="img/battery-diesel.png">
-        <div class="pcard-img"><img src="img/battery-diesel.png" alt="HD Diesel 120" loading="lazy"/><span class="pb pbagm">Diésel HD</span><span class="pb-brand">TOYO</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>HD Diesel 120</h3><div class="pcca pcca-cyan"><span>CCA</span><b>1000A</b></div></div>
-          <p>Diésel pesado · Minería y flota · Alta compresión</p>
-          <div class="ptags"><span>⚡ 120 Ah</span><span>🔥 1000 A</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-cyan">Ver y Comprar →</button>
-      </article>
-
-      <!-- PREMIUM -->
-      <article class="pcard pcard-premium" data-auto="premium" data-model="VOLTA Silver Plus" data-brand="VOLTA" data-ah="Alta Densidad" data-cca="Ag-Silver" data-img="img/battery-premium.png">
-        <div class="pcard-img"><img src="img/battery-premium.png" alt="VOLTA Silver Plus" loading="lazy"/><span class="pb pbprem">⭐ Premium</span><span class="pb-brand">VOLTA</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>Silver Plus</h3><div class="pcca pcca-purple"><span>Ag</span><b>Silver</b></div></div>
-          <p>Placas de plata pura · Calor extremo y vibración</p>
-          <div class="ptags"><span>🌡 Anti-calor</span><span>📳 Anti-vibr.</span><span>✅ 24 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-purple">Ver y Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-premium" data-auto="premium" data-model="Panasonic N200" data-brand="Panasonic" data-ah="200 Ah" data-cca="Top Tier" data-img="img/battery-premium.png">
-        <div class="pcard-img"><img src="img/battery-premium.png" alt="Panasonic N200" loading="lazy"/><span class="pb pbprem">⭐ Premium</span><span class="pb-brand">Panasonic</span><span class="pb-top">🏆 Top Tier</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>Panasonic N200</h3><div class="pcca pcca-purple"><span>TOP</span><b>Tier</b></div></div>
-          <p>Tecnología japonesa · Máxima reserva · 36 meses</p>
-          <div class="ptags"><span>⚡ 200 Ah</span><span>🌍 Japón</span><span>✅ 36 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-purple">Ver y Comprar →</button>
-      </article>
-
-    </div><!-- /auto-grid -->
-  </div>
-</section>
-
-<!-- ══ BATERÍAS DE MOTO ══ -->
-<section class="cat-section cat-moto" id="motos">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-tag sec-tag-moto">🏍 Línea Motocicletas · 14 Modelos</div>
-      <h2 class="sec-h2">Baterías de <em class="em-moto">Moto</em></h2>
-      <p class="sec-p">Scooters, naked, sport, enduro y touring. Compatibles con Honda, Yamaha, Kawasaki, Suzuki, BMW, KTM y más. Haz clic → compra por WhatsApp al instante.</p>
-    </div>
-
-    <!-- MOTO SUB-FILTROS -->
-    <div class="sub-tabs moto-tabs" id="motoTabs">
-      <button class="stab stab-moto active" data-mcat="all">🏍 Todos</button>
-      <button class="stab stab-moto" data-mcat="scooter">🛵 Scooter</button>
-      <button class="stab stab-moto" data-mcat="sport">🏁 Sport</button>
-      <button class="stab stab-moto" data-mcat="naked">⚡ Naked / Urbana</button>
-      <button class="stab stab-moto" data-mcat="enduro">🌲 Enduro / Trail</button>
-      <button class="stab stab-moto" data-mcat="touring">🛣 Touring / Big</button>
-    </div>
-
-    <div class="cat-grid moto-grid" id="motoGrid">
-
-      <!-- SCOOTER -->
-      <article class="pcard pcard-moto" data-mcat="scooter" data-model="MF5L-BS" data-brand="FBC" data-ah="5 Ah" data-cca="65 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF5L-BS" loading="lazy"/><span class="pb pbmoto">🛵 Scooter</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF5L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>5Ah</b></div></div>
-          <p>Scooters 50–100cc · Honda Biz 100, Yamaha Neo, Kymco</p>
-          <div class="ptags"><span>⚡ 5 Ah</span><span>🔥 65 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="scooter" data-model="MF6L-BS" data-brand="Energetic" data-ah="6 Ah" data-cca="80 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF6L-BS" loading="lazy"/><span class="pb pbmoto">🛵 Scooter</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF6L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>6Ah</b></div></div>
-          <p>Scooters 110–125cc · Honda Beat, SYM, Aprilia SR</p>
-          <div class="ptags"><span>⚡ 6 Ah</span><span>🔥 80 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <!-- NAKED / URBANA -->
-      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF7L-BS" data-brand="FBC" data-ah="7 Ah" data-cca="100 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF7L-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF7L-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>7Ah</b></div></div>
-          <p>Motos urbanas 110–150cc · Honda CB, Yamaha YBR, AKT</p>
-          <div class="ptags"><span>⚡ 7 Ah</span><span>🔥 100 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF9-BS" data-brand="Energetic" data-ah="9 Ah" data-cca="135 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF9-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">Energetic</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF9-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>9Ah</b></div></div>
-          <p>Naked 150–200cc · Yamaha FZ, Honda CB 190, Bajaj NS</p>
-          <div class="ptags"><span>⚡ 9 Ah</span><span>🔥 135 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="naked" data-model="MF10-BS" data-brand="AUTOBAT" data-ah="10 Ah" data-cca="150 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF10-BS" loading="lazy"/><span class="pb pbmoto">⚡ Naked</span><span class="pb-brand">AUTOBAT</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF10-BS</h3><div class="pcca pcca-moto"><span>Ah</span><b>10Ah</b></div></div>
-          <p>Naked 200–250cc · Kawasaki Z250, Honda Hornet 250</p>
-          <div class="ptags"><span>⚡ 10 Ah</span><span>🔥 150 A</span><span>🛡 Sellada MF</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <!-- SPORT -->
-      <article class="pcard pcard-moto" data-mcat="sport" data-model="MF12-BS" data-brand="AUTOBAT" data-ah="12 Ah" data-cca="185 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF12-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">AUTOBAT</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF12-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>185A</b></div></div>
-          <p>Sport 250–400cc · Kawasaki Ninja 300, Honda CBR 300</p>
-          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 185 A</span><span>🛡 Sellada MF</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="sport" data-model="YTX12-BS" data-brand="FBC" data-ah="10 Ah" data-cca="180 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX12-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>YTX12-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>180A</b></div></div>
-          <p>Sport 400–600cc · Yamaha R3, Kawasaki Z400, Suzuki GSX</p>
-          <div class="ptags"><span>⚡ 10 Ah</span><span>🔥 180 A</span><span>🛡 AGM Sport</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="sport" data-model="YTX14-BS" data-brand="Energetic" data-ah="12 Ah" data-cca="200 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX14-BS" loading="lazy"/><span class="pb pbmoto">🏁 Sport</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>YTX14-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>200A</b></div></div>
-          <p>Sport 600–750cc · Honda CBR 600, Yamaha R6, Kawasaki ZX6R</p>
-          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 200 A</span><span>🛡 AGM Sport</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <!-- ENDURO / TRAIL -->
-      <article class="pcard pcard-moto" data-mcat="enduro" data-model="MF7B-4" data-brand="FBC" data-ah="7 Ah" data-cca="90 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="MF7B-4" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">FBC</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>MF7B-4</h3><div class="pcca pcca-moto"><span>Ah</span><b>7Ah</b></div></div>
-          <p>Enduro / Trail 200cc · Honda XR, Yamaha WR, Beta</p>
-          <div class="ptags"><span>⚡ 7 Ah</span><span>🔥 90 A</span><span>🛡 Anti-vibr.</span><span>✅ 6 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="enduro" data-model="YTX9-BS" data-brand="AUTOBAT" data-ah="8 Ah" data-cca="120 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX9-BS" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">AUTOBAT</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>YTX9-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>120A</b></div></div>
-          <p>Trail / Aventura 250–400cc · KTM Duke, Royal Enfield, CRF</p>
-          <div class="ptags"><span>⚡ 8 Ah</span><span>🔥 120 A</span><span>🛡 Anti-vibr.</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="enduro" data-model="YTZ10S" data-brand="Energetic" data-ah="8.6 Ah" data-cca="190 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTZ10S" loading="lazy"/><span class="pb pbmoto">🌲 Enduro</span><span class="pb-brand">Energetic</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>YTZ10S</h3><div class="pcca pcca-moto"><span>CCA</span><b>190A</b></div></div>
-          <p>Aventura 450–900cc · Honda Africa Twin, KTM Adventure</p>
-          <div class="ptags"><span>⚡ 8.6 Ah</span><span>🔥 190 A</span><span>🛡 AGM Gel</span><span>✅ 12 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <!-- TOURING / BIG -->
-      <article class="pcard pcard-moto" data-mcat="touring" data-model="YTX20L-BS" data-brand="FBC" data-ah="18 Ah" data-cca="270 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="YTX20L-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">FBC</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>YTX20L-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>270A</b></div></div>
-          <p>Touring 1000–1300cc · Honda Gold Wing, Yamaha FJR</p>
-          <div class="ptags"><span>⚡ 18 Ah</span><span>🔥 270 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="touring" data-model="BTX14-BS" data-brand="AUTOBAT" data-ah="12 Ah" data-cca="230 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="BTX14-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">AUTOBAT</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>BTX14-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>230A</b></div></div>
-          <p>Big bike 800–1200cc · BMW R1200, Harley-Davidson, Ducati</p>
-          <div class="ptags"><span>⚡ 12 Ah</span><span>🔥 230 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-      <article class="pcard pcard-moto" data-mcat="touring" data-model="BTX16-BS" data-brand="Energetic" data-ah="14 Ah" data-cca="250 A" data-img="img/battery-moto.png">
-        <div class="pcard-img"><img src="img/battery-moto.png" alt="BTX16-BS" loading="lazy"/><span class="pb pbmoto">🛣 Touring</span><span class="pb-brand">Energetic</span><span class="pb-new">NUEVO</span></div>
-        <div class="pcard-body">
-          <div class="pcard-top"><h3>BTX16-BS</h3><div class="pcca pcca-moto"><span>CCA</span><b>250A</b></div></div>
-          <p>Cruiser / Custom · Harley Sportster, Indian Scout, Triumph Bonneville</p>
-          <div class="ptags"><span>⚡ 14 Ah</span><span>🔥 250 A</span><span>🛡 AGM Premium</span><span>✅ 18 m</span></div>
-        </div>
-        <button class="pcard-buy pcard-buy-moto">🏍 Comprar →</button>
-      </article>
-
-    </div><!-- /moto-grid -->
-  </div>
-</section>
-
-<!-- ══ CONTACTO ══ -->
-<section class="contact-sec" id="contacto">
-  <div class="container">
-    <div class="contact-box">
-      <div class="contact-left">
-        <div class="sec-tag">📞 Atención Directa</div>
-        <h2 class="contact-h2">Habla con<br>un asesor</h2>
-        <p>Respuesta inmediata. Envíanos el modelo y te decimos el precio al instante.</p>
-        <div class="c-items">
-          <div class="ci"><span>📞</span><div><small>Teléfono / WhatsApp</small><strong><a href="tel:+59165302585">65302585</a></strong></div></div>
-          <div class="ci"><span>📍</span><div><small>Ubicación</small><strong>Cochabamba, Bolivia</strong></div></div>
-          <div class="ci"><span>🕐</span><div><small>Horario</small><strong>Lun–Sáb 8:00–18:00</strong></div></div>
-        </div>
-        <a href="https://wa.me/59165302585?text=Hola%2C%20quisiera%20consultar%20precios." target="_blank" class="wa-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
-          Chatear en WhatsApp
-        </a>
-      </div>
-      <div class="contact-right">
-        <form class="cform" id="cform">
-          <h3>Solicitar cotización</h3>
-          <div class="fg"><label>Nombre</label><input type="text" id="f-name" placeholder="Tu nombre" required/></div>
-          <div class="fg"><label>Teléfono</label><input type="tel" id="f-tel" placeholder="7XXXXXXX"/></div>
-          <div class="fg"><label>Tipo de vehículo</label>
-            <select id="f-veh">
-              <option value="">Selecciona…</option>
-              <option>Auto compacto / Sedan</option>
-              <option>Camioneta / SUV</option>
-              <option>Diésel / 4×4</option>
-              <option>Bus / Microbus</option>
-              <option>Camión de carga</option>
-              <option>Maquinaria pesada</option>
-              <option>Motocicleta</option>
-            </select>
-          </div>
-          <div class="fg"><label>Mensaje</label><textarea id="f-msg" rows="3" placeholder="¿Qué necesitas?"></textarea></div>
-          <button type="submit" class="btn-gold w-full" id="formBtn">Enviar por WhatsApp →</button>
-          <p class="form-ok" id="formOk" style="display:none">✅ Redirigiendo a WhatsApp…</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="CQ" class="footer-logo"/>
-        <div><span class="fn">COMERCIAL QUILLACAS</span><span class="ft">Distribución Autorizada · Bolivia</span></div>
-      </div>
-      <nav class="footer-nav">
-        <a href="#autos">Baterías Auto</a>
-        <a href="#motos">Baterías Moto</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/59165302585" target="_blank">WhatsApp</a>
-      </nav>
-    </div>
-    <div class="footer-bot">
-      <span>© 2025 Comercial Quillacas · Todos los derechos reservados</span>
-      <span>📞 65302585 · Cochabamba, Bolivia</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ══ MODAL COMPRA ══ -->
-<div class="modal-bg" id="modalBg" aria-hidden="true">
-  <div class="modal-box" id="modalBox" role="dialog" aria-modal="true">
-    <button class="modal-x" id="modalX" aria-label="Cerrar">✕</button>
-    <div class="modal-img-col">
-      <img id="mImg" src="" alt="" class="modal-img"/>
-      <div class="modal-glow"></div>
-    </div>
-    <div class="modal-data">
-      <span class="modal-badge" id="mBadge"></span>
-      <h2 class="modal-model" id="mModel"></h2>
-      <div class="modal-stats">
-        <div class="mstat" id="mAh"></div>
-        <div class="mstat" id="mCca"></div>
-      </div>
-      <div class="modal-note">
-        <span>💬</span>
-        <p>Enviaremos el modelo exacto por WhatsApp y recibirás el precio de inmediato.</p>
-      </div>
-      <a class="modal-wa" id="mWa" href="#" target="_blank" rel="noopener">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.15 6.15 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.61L0 24l6.545-1.715A11.945 11.945 0 0012 23.7C18.627 23.7 24 18.327 24 11.7 24 5.073 18.627 0 12 0zm0 21.7a9.887 9.887 0 01-5.313-1.575l-.38-.226-3.946 1.033 1.052-3.84-.248-.395A9.87 9.87 0 012 11.7C2 6.368 6.368 2 12 2s10 4.368 10 9.7c0 5.332-4.368 9.7-10 9.7z"/></svg>
-        Comprar Batería — <span id="mModelName"></span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ══ CHAT WIDGET ══ -->
-<div class="chat-widget" id="chatWidget" aria-live="polite">
-
-  <!-- FAB Button -->
-  <button class="chat-fab" id="chatFab" aria-label="Abrir chat de asesoría" title="¿Tienes dudas? ¡Chatea con nosotros!">
-    <span class="chat-fab-icon chat-icon-open">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
-    </span>
-    <span class="chat-fab-icon chat-icon-close" style="display:none">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </span>
-    <span class="chat-fab-badge" id="chatBadge">1</span>
-    <span class="chat-fab-pulse"></span>
-  </button>
-
-  <!-- Chat Panel -->
-  <div class="chat-panel" id="chatPanel" aria-hidden="true" role="dialog" aria-label="Chat de asesoría Comercial Quillacas">
-
-    <!-- Header -->
-    <div class="chat-header">
-      <div class="chat-header-avatar">
-        <img src="img/logo.png" alt="Comercial Quillacas" class="chat-avatar-img"/>
-        <span class="chat-avatar-dot"></span>
-      </div>
-      <div class="chat-header-info">
-        <strong>Dana</strong>
-        <span>Asesora Virtual · En línea ✨</span>
-      </div>
-      <button class="chat-header-close" id="chatClose" aria-label="Cerrar chat">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-
-    <!-- Messages -->
-    <div class="chat-messages" id="chatMessages">
-      <!-- Messages inserted by JS -->
-    </div>
-
-    <!-- Quick Replies -->
-    <div class="chat-quick" id="chatQuick">
-      <button class="cq-btn" data-q="precios">💰 Ver precios</button>
-      <button class="cq-btn" data-q="marcas">🏷 ¿Qué marcas tienen?</button>
-      <button class="cq-btn" data-q="garantia">🛡 Garantía</button>
-      <button class="cq-btn" data-q="ubicacion">📍 Ubicación</button>
-      <button class="cq-btn" data-q="servicio">🔧 Servicio técnico</button>
-      <button class="cq-btn" data-q="whatsapp">📲 Ir a WhatsApp</button>
-    </div>
-
-    <!-- Input -->
-    <form class="chat-form" id="chatForm" autocomplete="off">
-      <input type="text" id="chatInput" class="chat-input" placeholder="Escribe tu pregunta…" maxlength="300" aria-label="Escribe tu mensaje"/>
-      <button type="submit" class="chat-send" aria-label="Enviar mensaje">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-      </button>
-    </form>
-
-  </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
